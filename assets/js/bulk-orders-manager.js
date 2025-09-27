@@ -13,10 +13,14 @@ class BulkOrdersManager {
      * Initialize the bulk orders system
      */
     async init() {
+        console.log('BulkOrdersManager: Starting initialization...');
         try {
             await this.loadBulkOrdersData();
+            console.log('BulkOrdersManager: Data loaded successfully');
             this.setupContainer();
+            console.log('BulkOrdersManager: Container setup complete');
             this.renderBulkOrders();
+            console.log('BulkOrdersManager: Rendering complete');
         } catch (error) {
             console.error('Failed to initialize bulk orders:', error);
             this.showFallback();
@@ -28,12 +32,15 @@ class BulkOrdersManager {
      */
     async loadBulkOrdersData() {
         try {
+            console.log('BulkOrdersManager: Fetching bulk orders data...');
             const response = await fetch('assets/data/bulk-orders.json');
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             const data = await response.json();
+            console.log('BulkOrdersManager: JSON data received:', data);
             this.bulkOrdersData = data.bulkOrders;
+            console.log('BulkOrdersManager: Bulk orders data set:', this.bulkOrdersData);
         } catch (error) {
             console.error('Failed to load bulk orders data:', error);
             throw error;
@@ -44,23 +51,30 @@ class BulkOrdersManager {
      * Setup the container in the DOM
      */
     setupContainer() {
+        console.log('BulkOrdersManager: Looking for container with ID: bulk-orders-content');
         this.container = document.getElementById('bulk-orders-content');
         if (!this.container) {
             console.error('Bulk orders container not found');
             return;
         }
+        console.log('BulkOrdersManager: Container found:', this.container);
     }
 
     /**
      * Render the complete bulk orders section
      */
     renderBulkOrders() {
+        console.log('BulkOrdersManager: Starting renderBulkOrders...');
+        console.log('BulkOrdersManager: Data available:', !!this.bulkOrdersData);
+        console.log('BulkOrdersManager: Container available:', !!this.container);
+        
         if (!this.bulkOrdersData || !this.container) {
             console.error('Bulk orders data or container not available');
             return;
         }
 
         const data = this.bulkOrdersData;
+        console.log('BulkOrdersManager: About to render with data:', data);
         
         this.container.innerHTML = `
             <div class="bulk-orders-info">
@@ -150,9 +164,3 @@ class BulkOrdersManager {
         }
     }
 }
-
-// Initialize bulk orders manager when DOM is loaded
-document.addEventListener('DOMContentLoaded', async () => {
-    const bulkOrdersManager = new BulkOrdersManager();
-    await bulkOrdersManager.init();
-});
