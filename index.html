@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ඉදි ආප්ප කඩේ - Authentic Sri Lankan String Hoppers | Galle</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/images/favicon.ico"
+    />
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
@@ -22,12 +26,18 @@
     <nav class="navbar">
       <div class="nav-container">
         <div class="nav-logo">
+          <img
+            src="assets/images/logo.png"
+            alt="Idi Appa Kade Logo"
+            class="nav-logo-img"
+          />
           <h2>ඉදි ආප්ප කඩේ - Idi Appa Kade</h2>
         </div>
         <div class="nav-menu" id="nav-menu">
           <a href="#home" class="nav-link">Home</a>
           <a href="#menu" class="nav-link">Menu</a>
           <a href="#about" class="nav-link">About</a>
+          <a href="#bulk-orders" class="nav-link">Bulk Orders</a>
           <a href="#contact" class="nav-link">Contact</a>
           <a href="#order" class="nav-link order-btn">Order Now</a>
         </div>
@@ -143,6 +153,24 @@
       </div>
     </section>
 
+    <!-- Bulk Orders Section -->
+    <section id="bulk-orders" class="bulk-orders">
+      <div class="container">
+        <h2 class="section-title">Bulk Orders for Events</h2>
+        <p class="section-subtitle">
+          Perfect for hotels, parties, family gatherings, and special events
+        </p>
+        
+        <!-- Dynamic Bulk Orders Content Container -->
+        <div id="bulk-orders-content" class="bulk-orders-content">
+          <!-- Bulk orders content will be dynamically loaded here -->
+          <div class="loading-bulk-orders">
+            <p>Loading bulk orders information...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Order Section -->
     <section id="order" class="order">
       <div class="container">
@@ -233,7 +261,17 @@
       <div class="container">
         <div class="footer-content">
           <div class="footer-section">
-            <h3>ඉදි ආප්ප කඩේ</h3>
+            <div class="nav-logo" style="margin-bottom: 10px">
+              <img
+                src="assets/images/logo.png"
+                alt="Idi Appa Kade Logo"
+                class="nav-logo-img"
+              />
+              <h3 class="nav-logo-text" style="margin-top: 10px">
+                ඉදි ආප්ප කඩේ
+              </h3>
+            </div>
+
             <p>
               Bringing authentic Sri Lankan string hoppers and traditional
               flavors to your table with love and passion.
@@ -250,6 +288,7 @@
               <li><a href="#home">Home</a></li>
               <li><a href="#menu">Menu</a></li>
               <li><a href="#about">About</a></li>
+              <li><a href="#bulk-orders">Bulk Orders</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div>

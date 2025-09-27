@@ -1,0 +1,88 @@
+{
+  "bulkOrders": {
+    "title": "Bulk Orders for Events",
+    "subtitle": "Perfect for hotels, parties, family gatherings, and special events",
+    "intro": {
+      "heading": "Large Quantity String Hoppers",
+      "description": "We specialize in providing fresh, authentic string hoppers in large quantities for your special occasions. Whether it's a hotel catering need, a wedding celebration, a family gathering, or any special event, we've got you covered."
+    },
+    "eventTypes": {
+      "heading": "Perfect for:",
+      "events": [
+        {
+          "icon": "fas fa-utensils",
+          "name": "Hotels & Restaurants"
+        },
+        {
+          "icon": "fas fa-birthday-cake",
+          "name": "Birthday Parties"
+        },
+        {
+          "icon": "fas fa-heart",
+          "name": "Weddings"
+        },
+        {
+          "icon": "fas fa-users",
+          "name": "Family Gatherings"
+        },
+        {
+          "icon": "fas fa-hands-helping",
+          "name": "Alms Giving (දාන)"
+        },
+        {
+          "icon": "fas fa-building",
+          "name": "Corporate Events"
+        },
+        {
+          "icon": "fas fa-calendar-alt",
+          "name": "Religious Ceremonies"
+        },
+        {
+          "icon": "fas fa-graduation-cap",
+          "name": "Celebrations"
+        }
+      ]
+    },
+    "features": [
+      {
+        "icon": "fas fa-clock",
+        "title": "Advance Orders",
+        "description": "Place your order 24-48 hours in advance for best service"
+      },
+      {
+        "icon": "fas fa-leaf",
+        "title": "Fresh Preparation",
+        "description": "All string hoppers made fresh on the day of your event"
+      },
+      {
+        "icon": "fas fa-truck",
+        "title": "Delivery Available",
+        "description": "We can arrange delivery for bulk orders within Galle area"
+      },
+      {
+        "icon": "fas fa-calculator",
+        "title": "Competitive Pricing",
+        "description": "Special bulk pricing for large quantities"
+      }
+    ],
+    "contact": {
+      "heading": "Ready to Place a Bulk Order?",
+      "description": "Call us to discuss your requirements, get pricing, and schedule your order. Our team will help you plan the perfect amount for your event.",
+      "phone": {
+        "number": "+94777468551",
+        "display": "+94 77 746 8551",
+        "hours": "Available during business hours: 4:00 PM - 10:00 PM"
+      },
+      "orderProcess": {
+        "heading": "How to Order:",
+        "steps": [
+          "Call us at **+94 77 746 8551**",
+          "Discuss your event details and quantity needed",
+          "Get pricing and confirm your order",
+          "Schedule pickup or delivery"
+        ]
+      },
+      "note": "**Note:** Minimum order quantities apply for bulk orders. Please call to discuss your specific needs and get a customized quote."
+    }
+  }
+}

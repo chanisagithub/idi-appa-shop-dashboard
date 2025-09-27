@@ -217,4 +217,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     `;
     document.head.appendChild(style);
+    // Initialize menu manager
+    const menuManager = new MenuManager();
+    menuManager.init();
+
+    // Initialize bulk orders manager
+    const bulkOrdersManager = new BulkOrdersManager();
+    bulkOrdersManager.init();
+
 }); // Close DOMContentLoaded event listener

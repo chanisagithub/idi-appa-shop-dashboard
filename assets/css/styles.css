@@ -39,10 +39,23 @@ body {
     align-items: center;
 }
 
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.nav-logo-img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
 .nav-logo h2 {
     color: #ff9021;
     font-weight: 700;
     font-size: 1.8rem;
+    margin: 0;
 }
 
 .nav-menu {
@@ -380,6 +393,200 @@ body {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
+/* Bulk Orders Section */
+.bulk-orders {
+    padding: 100px 0;
+    background: #f8f9fa;
+}
+
+.bulk-orders-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+.bulk-intro h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.bulk-intro p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.event-types h4 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.event-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.event-item i {
+    color: #ff9021;
+    font-size: 1.3rem;
+}
+
+.event-item span {
+    font-weight: 500;
+    color: #333;
+}
+
+.bulk-features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item i {
+    color: #ff9021;
+    font-size: 1.5rem;
+    margin-top: 0.25rem;
+    flex-shrink: 0;
+}
+
+.feature-item h5 {
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature-item p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.bulk-contact-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+    position: sticky;
+    top: 2rem;
+}
+
+.bulk-contact-card h3 {
+    color: #333;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.bulk-contact-card > p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.contact-method {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.contact-method i {
+    color: #ff9021;
+    font-size: 1.5rem;
+    margin-top: 0.25rem;
+}
+
+.contact-method h4 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.phone-link {
+    color: #ff9021;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.phone-link:hover {
+    color: #e6811e;
+}
+
+.contact-method p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.order-process {
+    margin: 2rem 0;
+}
+
+.order-process h4 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.order-process ol {
+    color: #666;
+    line-height: 1.8;
+    padding-left: 1.5rem;
+}
+
+.order-process li {
+    margin-bottom: 0.5rem;
+}
+
+.bulk-note {
+    background: #fff3e0;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid #ff9021;
+}
+
+.bulk-note p {
+    color: #333;
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
 /* Order Section */
 .order {
     padding: 100px 0;
@@ -603,6 +810,14 @@ body {
         display: flex;
     }
 
+    .nav-logo-img {
+        height: 35px;
+    }
+
+    .nav-logo h2 {
+        font-size: 1.4rem;
+    }
+
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -618,6 +833,19 @@ body {
 
     .nav-menu.active {
         left: 0;
+    }
+
+    /* Hamburger animation */
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
     }
 
     .hero {
@@ -651,6 +879,19 @@ body {
     .about-features {
         grid-template-columns: 1fr;
         gap: 1rem;
+    }
+
+    .bulk-orders-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .event-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bulk-contact-card {
+        position: static;
     }
 
     .contact-content {
@@ -693,6 +934,21 @@ body {
     .hero-stats {
         flex-direction: column;
         align-items: center;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .nav-logo-img {
+        height: 30px;
+    }
+
+    .nav-logo h2 {
+        font-size: 1.2rem;
+    }
+
+    .nav-logo {
+        gap: 0.5rem;
     }
 }
 
