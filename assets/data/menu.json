@@ -1,0 +1,76 @@
+{
+  "menuCategories": [
+    {
+      "id": "mains",
+      "title": "Mains (ප්‍රධාන ආහාර)",
+      "items": [
+        {
+          "id": "white_red_hoppers_curries",
+          "titleSinhala": "සුදු /රතු ඉදි ආප්ප - හොදි වර්ග තෝරා ගන්න",
+          "titleEnglish": "White / Red String Hoppers with Curries",
+          "description": "Fresh white string hoppers served with your choice of traditional Sri Lankan curries",
+          "price": "Priced by add-ons",
+          "image": "assets/images/menu/white_string_hoppers_curries.webp",
+          "alt": "White String Hoppers with Curries"
+        },
+        {
+          "id": "white_hoppers_20_set",
+          "titleSinhala": "සුදු ඉදි ආප්ප පමණක් (20)",
+          "titleEnglish": "20 Set of White String Hoppers",
+          "description": "A generous portion of 20 fresh white string hoppers, perfect for sharing",
+          "price": "LKR 160.00",
+          "image": "assets/images/menu/white_string_hoppers_20_set.png",
+          "alt": "20 Set of White String Hoppers"
+        },
+        {
+          "id": "red_hoppers_20_set",
+          "titleSinhala": "රතු ඉදි ආප්ප පමණක් (20)",
+          "titleEnglish": "20 Set of Red String Hoppers",
+          "description": "A generous portion of 20 nutritious red string hoppers, perfect for sharing",
+          "price": "LKR 160.00",
+          "image": "assets/images/menu/red_string_hoppers_20_set.png",
+          "alt": "20 Set of Red String Hoppers"
+        }
+      ]
+    },
+    {
+      "id": "curries",
+      "title": "Curries (කරි වර්ග)",
+      "items": [
+        {
+          "id": "fish_curry",
+          "titleSinhala": "කිරි මාළු හොදි - කෝප්පයක ප්‍රමාණය",
+          "titleEnglish": "Fish Curry - One Cup",
+          "description": "Rich and flavorful fish curry with a piece of fresh fish, served in a generous cup portion",
+          "price": "LKR 220.00",
+          "image": "assets/images/menu/fish_curry_one_cup.webp",
+          "alt": "Fish Curry with a piece of fish"
+        },
+        {
+          "id": "coconut_sambol",
+          "titleSinhala": "පොල් සම්බෝල (කෝප්පයක ප්‍රමාණය)",
+          "titleEnglish": "Coconut Sambol - One Cup",
+          "description": "Freshly prepared coconut sambol with chili and spices, a perfect accompaniment",
+          "price": "LKR 100.00",
+          "image": "assets/images/menu/coconut_sambol_one_cup.webp",
+          "alt": "Coconut Sambol"
+        }
+      ]
+    },
+    {
+      "id": "desserts",
+      "title": "Desserts (අතුරුපස)",
+      "items": [
+        {
+          "id": "watalappan",
+          "titleSinhala": "වටලප්පන් කප්",
+          "titleEnglish": "Watalappan - One Cup",
+          "description": "Traditional Sri Lankan steamed dessert made with coconut milk, jaggery, and spices",
+          "price": "LKR 130.00",
+          "image": "assets/images/menu/watalappan-cups.png",
+          "alt": "Watalappan"
+        }
+      ]
+    }
+  ]
+}

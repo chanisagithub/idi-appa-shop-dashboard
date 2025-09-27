@@ -1,17 +1,21 @@
-// Mobile Navigation Toggle
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('nav-menu');
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Navigation Toggle
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
 
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    navMenu.classList.remove('active');
-}));
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+    }
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -39,26 +43,29 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Contact form handling
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(this);
-    const name = this.querySelector('input[type="text"]').value;
-    const email = this.querySelector('input[type="email"]').value;
-    const message = this.querySelector('textarea').value;
-    
-    // Simple validation
-    if (!name || !email || !message) {
-        showNotification('Please fill in all fields', 'error');
-        return;
-    }
-    
-    // Simulate form submission
-    showNotification('Thank you for your message! We\'ll get back to you soon.', 'success');
-    this.reset();
-});
+// Contact form handling (only if form exists)
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(this);
+        const name = this.querySelector('input[type="text"]').value;
+        const email = this.querySelector('input[type="email"]').value;
+        const message = this.querySelector('textarea').value;
+        
+        // Simple validation
+        if (!name || !email || !message) {
+            showNotification('Please fill in all fields', 'error');
+            return;
+        }
+        
+        // Simulate form submission
+        showNotification('Thank you for your message! We\'ll get back to you soon.', 'success');
+        this.reset();
+    });
+}
 
 // Notification system
 function showNotification(message, type = 'info') {
@@ -200,13 +207,14 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Add CSS for ripple animation
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes ripple {
-        to {
-            transform: scale(4);
-            opacity: 0;
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes ripple {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
         }
-    }
-`;
-document.head.appendChild(style);
+    `;
+    document.head.appendChild(style);
+}); // Close DOMContentLoaded event listener
