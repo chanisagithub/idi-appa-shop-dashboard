@@ -104,19 +104,58 @@ class MenuManager {
         itemDiv.className = 'menu-item';
         itemDiv.setAttribute('data-item-id', item.id);
 
+        // Generate spice level indicators
+        const spiceLevelHTML = this.generateSpiceLevel(item.spiceLevel);
+        
+        // Generate ingredients HTML
+        const ingredientsHTML = item.specialIngredients ? 
+            `<div class="special-ingredients">
+                ${item.specialIngredients.map(ingredient => 
+                    `<span class="ingredient ingredient-float">${ingredient}</span>`
+                ).join('')}
+            </div>` : '';
+
         itemDiv.innerHTML = `
             <div class="menu-image">
                 <img src="${item.image}" alt="${item.alt}" loading="lazy" />
+                ${spiceLevelHTML}
             </div>
             <div class="menu-content">
                 <h4>${item.titleSinhala}</h4>
                 <h5>${item.titleEnglish}</h5>
                 <p>${item.description}</p>
+                ${ingredientsHTML}
                 <span class="price">${item.price}</span>
             </div>
         `;
 
         return itemDiv;
+    }
+
+    /**
+     * Generate spice level indicators
+     */
+    generateSpiceLevel(spiceLevel) {
+        if (!spiceLevel) return '';
+        
+        const spiceMap = {
+            'mild': 1,
+            'medium': 2,
+            'hot': 3
+        };
+        
+        const spiceCount = spiceMap[spiceLevel] || 0;
+        if (spiceCount === 0) return '';
+        
+        // Create individual chili spans
+        const chiliSpans = [];
+        for (let i = 0; i < spiceCount; i++) {
+            chiliSpans.push(`<span class="chili">🌶️</span>`);
+        }
+        
+        return `<div class="spice-level ${spiceLevel}">
+            ${chiliSpans.join('')}
+        </div>`;
     }
 
     // Dynamic modification methods removed for security

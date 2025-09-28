@@ -11,7 +11,9 @@
           "description": "Fresh white string hoppers served with your choice of traditional Sri Lankan curries",
           "price": "Priced by add-ons",
           "image": "assets/images/menu/white_string_hoppers_curries.webp",
-          "alt": "White String Hoppers with Curries"
+          "alt": "White String Hoppers with Curries",
+          "isHot": true,
+          "specialIngredients": ["🥥 Fresh Coconut", "🌿 Curry Leaves", "🧄 Garlic"]
         },
         {
           "id": "white_hoppers_20_set",
@@ -44,7 +46,10 @@
           "description": "Rich and flavorful fish curry with a piece of fresh fish, served in a generous cup portion",
           "price": "LKR 220.00",
           "image": "assets/images/menu/fish_curry_one_cup.webp",
-          "alt": "Fish Curry with a piece of fish"
+          "alt": "Fish Curry with a piece of fish",
+          "spiceLevel": "mild",
+          "isHot": true,
+          "specialIngredients": ["🐟 Fresh Fish", "🥥 Coconut Milk", "🌶️ Local Spices"]
         },
         {
           "id": "coconut_sambol",
@@ -53,7 +58,10 @@
           "description": "Freshly prepared coconut sambol with chili and spices, a perfect accompaniment",
           "price": "LKR 100.00",
           "image": "assets/images/menu/coconut_sambol_one_cup.webp",
-          "alt": "Coconut Sambol"
+          "alt": "Coconut Sambol",
+          "spiceLevel": "medium",
+          "isHot": false,
+          "specialIngredients": ["🥥 Fresh Coconut", "🌶️ Red Chili", "🧅 Onions"]
         }
       ]
     },
@@ -68,7 +76,9 @@
           "description": "Traditional Sri Lankan steamed dessert made with coconut milk, jaggery, and spices",
           "price": "LKR 130.00",
           "image": "assets/images/menu/watalappan-cups.png",
-          "alt": "Watalappan"
+          "alt": "Watalappan",
+          "isHot": false,
+          "specialIngredients": ["🥥 Coconut Milk", "🍯 Jaggery", "🥚 Farm Eggs"]
         }
       ]
     }
